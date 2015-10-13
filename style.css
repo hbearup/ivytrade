@@ -1,1 +1,20 @@
-//
+body
+{
+	background-color: #dddddd;
+	
+}
+.container
+{
+	background-color: #fff;
+	margin: 0 auto;
+	float: none;
+}
+.header
+{
+	height: 300px;
+	padding: 10px;
+}
+.search
+{
+	display: inline;
+}
