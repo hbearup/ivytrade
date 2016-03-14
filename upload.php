@@ -5,14 +5,11 @@ ini_set('display_errors', 1);
 ini_set('html_errors', false);
 error_reporting(E_ALL ^ E_DEPRECATED);
 
-$db_hostname = 'localhost:3306';
-$db_database = 'ivytrade';
-$db_username = 'root'; 
-$db_password = 'root'; 
+$config = parse_ini_file('database.ini'); 
 
 include 'functions.php';
 
-connect($db_hostname, $db_database, $db_username, $db_password);
+connect($config['server'], $config['database'], $config['user'], $config['password']);
 
 $index = getValue("index");
 $name = getValue("itemName");
