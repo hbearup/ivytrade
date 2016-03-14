@@ -173,6 +173,7 @@ $(document).ready(function ()
             error: function(jqXHR, textStatus, errorThrown) 
             {
                 $("#multi-msg").html('<pre><code class="prettyprint">AJAX Request Failed<br/> textStatus='+textStatus+', errorThrown='+errorThrown+'</code></pre>');
+                // how about now
             }           
 		});
 		return false;
