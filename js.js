@@ -178,5 +178,3 @@ $(document).ready(function ()
 		return false;
 	});
 });
-
-// git git git
