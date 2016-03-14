@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ivytrade</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<div class="col-md-10 containerd">
+			<div id="loginModal" class="modal fade" role="dialog">
+			 	<div class="modal-dialog">
+			    	<div class="modal-content">
+			     		<div class="modal-header">
+			        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+			        		<h4 class="modal-title">Login</h4>
+			      		</div>
+			      		<div class="modal-body">
+			        		<form id="loginForm">
+			        			<p id="loginGreet">Welcome back!</p>
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Username" id="username"><br>
+									<input type="password" class="form-control" placeholder="Password" id="password">
+								</div>
+								<div class="form-actions"><button type="submit" class="btn btn-default">Login</button></div>
+							</form>
+			      		</div>
+			    	</div>
+			  	</div>
+			</div>
+
+			<div id="addItemModal" class="modal fade" role="dialog">
+			 	<div class="modal-dialog">
+			    	<div class="modal-content">
+			     		<div class="modal-header">
+			        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+			        		<h4 class="modal-title">Sell an Item</h4>
+			      		</div>
+			      		<div class="modal-body">
+			        		<form id="addItemForm" action="" method="post" enctype="multipart/form-data">
+								<div class="form-group">
+									<label for="itemName">Name</label>
+										<input type="text" name="itemName" class="form-control" id="itemName"><br>
+									<label for="sel1">Category</label>
+										<select class="form-control" id="itemCategory" name="itemCategory">
+											<option>Textbooks</option>
+											<option>Supplies</option>
+											<option>Equipment</option>
+											<option>Handmade</option>
+										</select><br>
+									<label for="desc">Price</label>
+										<input type="text" name="itemPrice" class="form-control" id="itemPrice"><br>
+									<label for="desc">Description</label>
+										<textarea class="form-control" name="itemDesc" rows="5" id="itemDesc"></textarea>
+									<label for="pic">Photo</label>
+										<input id="pic" type="file" name="pic" class="file">
+								</div>
+								<div class="form-actions"><button type="submit" class="btn btn-default">List Item</button></div>
+							</form>
+			      		</div>
+			    	</div>
+			  	</div>
+			</div>
+
+			<div id="signupModal" class="modal fade" role="dialog">
+			 	<div class="modal-dialog">
+			    	<div class="modal-content">
+			     		<div class="modal-header">
+			        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+			        		<h4 class="modal-title">Sign Up</h4>
+			      		</div>
+			      		<div class="modal-body">
+			        		<form id="createAccount">
+			        			<p id="signupGreet">Create an account!</p>
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Email address" id="signupEmail"><br>
+									<input type="text" class="form-control" placeholder="Username" id="signupUsername"><br>
+									<input type="password" class="form-control" placeholder="Password" id="signupPassword">
+								</div>
+								<div class="form-actions"><button type="submit" class="btn btn-default">Sign Up</button></div>
+							</form>
+			      		</div>
+			    	</div>
+			  	</div>
+			</div>
+			
+			<div class="header">
+				<div class="image col-md-6">
+					<a href="/ivytrade"><img src="biglogo.png" width="100%"></a>
+				</div>
+
+				<div class="search col-md-6">
+					<div class="col-md-6">
+						<p class="text-left" id="greetings">
+							Hello, stranger! <a data-toggle="modal" data-target="#loginModal" href="#" data-dismiss="modal">Login</a> or 
+							<a data-toggle="modal" data-target="#signupModal" href="#" data-dismiss="modal">Sign Up</a>
+						</p></div>
+						<div class="col-md-6">
+						<p class="text-right"><a href="#">Account</a></p>
+					</div>
+					<div class="col-md-12">
+					<div class="input-group">
+	                    <input type="text" class="form-control input-md" placeholder="Search" />
+	                    	<span class="input-group-btn">
+	                        	<button class="btn btn-info btn-md" type="button">
+	                            	<i class="glyphicon glyphicon-search"></i>
+		                        </button>
+		                    </span>
+	                </div></div>
+	        	</div>
+
+        	</div>
+
+        	<div class="nav containerd">
+        		<ul class="link">
+	        		<a href="#"><li>Textbooks</li></a>
+	        		<a href="#"><li>Supplies</li></a>
+	        		<a href="#"><li>Equipment</li></a>
+	        		<a href="#"><li>Handmade</li></a>
+        		</ul>
+        	</div>
+
+        	<div id="content">
+
+	        	<h2>Welcome to ivytrade!</h2>
+
+	        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eros massa, rhoncus vel arcu non, consequat sagittis leo. Suspendisse suscipit mauris ac nibh lobortis sagittis id vitae libero. Donec egestas accumsan magna, in pretium sapien iaculis vel. Maecenas turpis mauris, laoreet ac vulputate ac, pharetra eu diam. Integer porttitor nibh ac bibendum volutpat. Phasellus sagittis quam nec enim sodales, ut accumsan neque lobortis. Nulla consectetur at lectus non fringilla. Duis lobortis arcu quis velit gravida, sit amet ultrices ligula porttitor. Aenean eget hendrerit ante. Curabitur lacinia elit id ex luctus, vitae pharetra ex vestibulum. Ut sem lectus, pretium et enim eu, molestie pellentesque mi. Quisque mollis velit sit amet tellus tristique, id consequat massa eleifend. Praesent ac ullamcorper elit, sed tempor dui. Praesent elit lectus, viverra quis dictum et, pretium sit amet nulla. Donec diam augue, venenatis non commodo sed, pulvinar ac augue. Mauris consequat pharetra consequat.</p>
+
+	        </div>
+
+        	<div id="footer">
+        		Hannah Bearup &middot; Senior Project 2015-2016 &middot; Last Updated: 3/9/16
+        	</div>
+        </div>
+
+		<script src="js.js"></script>
+
+	</body>
+</html>
